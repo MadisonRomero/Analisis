@@ -1,0 +1,10 @@
+CREATE TABLE Reservas (
+    id_reserva SERIAL PRIMARY KEY,
+    id_huesped INT REFERENCES huespedes1(id_huesped),
+    id_habitacion INT REFERENCES habitaciones1(id_habitacion),
+    fecha_entrada DATE NOT NULL,
+    fecha_salida DATE NOT NULL,
+    estado_reserva VARCHAR(50) NOT NULL,
+    precio_total NUMERIC(10, 2) NOT NULL
+);
+
