@@ -1,0 +1,7 @@
+CREATE TABLE Servicios (
+    id_servicio SERIAL PRIMARY KEY,
+    nombre_servicio VARCHAR(100) NOT NULL,
+    descripcion TEXT,
+    precio_servicio NUMERIC(10, 2) NOT NULL
+);
+
