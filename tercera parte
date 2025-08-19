@@ -1,0 +1,8 @@
+CREATE TABLE Reserva_Servicios (
+    id_reserva_servicio SERIAL PRIMARY KEY,
+    id_reserva INT REFERENCES Reservas(id_reserva),
+    id_servicio INT REFERENCES Servicios(id_servicio),
+    cantidad INT NOT NULL,
+    fecha_solicitud TIMESTAMP DEFAULT NOW()
+);
+
